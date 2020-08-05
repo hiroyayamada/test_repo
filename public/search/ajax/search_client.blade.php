@@ -1,0 +1,63 @@
+<span id="search_info">
+
+<div class="form-group">
+    <label>会社名</label>
+    <input type="text" class="form-control" name="company_name">
+</div>
+
+<div class="form-group">
+    <label>部署名</label>
+    <input type="text" class="form-control" name="department">
+</div>
+
+<div class="form-gruop">
+    <label>役職</label>
+    <input type="text" class="form-control" name="position">
+</div>
+
+<div class="form-group">
+    <label>氏名</label>
+    <input type="text" class="form-control" name="name">
+</div>
+
+<div class="form-group">
+    <label>電話番号</label>
+    <input type="text" name="phone_number" class="form-control">
+</div>
+
+<div class="form-group">
+    <label>メールアドレス</label>
+    <input type="text" name="email" class="form-control">
+</div>
+
+/*
+<div class="from-group">
+    <label>業種</label>
+    <select name="industry" class="form-control">
+        <option></option>
+        <option>販売</option>
+        <option>建設</option>
+    </select>
+</div>
+*/
+
+<div class="from-group">
+    <label>業種</label>
+    <select name="industry" class="form-control">
+        @foreach($industry as $value)
+        <option value="{{ $value['industry_name'] }}">{{ $value['industry_name'] }}</option>
+        @endforeach
+    </select>
+</div>
+
+<div class="form-group">
+    <label>所在地</label>
+    <input type="text" name="address" class="form-control">
+</div>
+
+<div class="form-group">
+    <label>売り上げ規模</label>
+    <input type="text" name="sales_scale" class="form-control">
+</div>
+
+</span>
